@@ -87,21 +87,87 @@
    }
    
 }
-.navbar__wrapper {
-   ul{
-      display: flex;
-      column-gap: 70px;
-      width: max-content;
-      margin: 27px auto 0 auto;
-      li {
-         a {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
-            color: var(--black);
-            font-family: var(--text__front);
-            text-decoration: none;
+.navbar {
+   &__menu {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: 100;
+      background: #EAE6DF;
+      padding-bottom: 80px;
+      transition: 0.4s all;
+      &__active {
+         left: 0;
+      }
+      &__exit {
+         cursor: pointer;
+      }
+      &__list {
+         margin-top: 46px;
+       
+         li {
+            margin-bottom: 34px;
+            a {
+               font-style: normal;
+               font-weight: 400;
+               font-size: 32px;
+               line-height: 20px;
+               color: var(--black);
+               font-family: var(--text__front);
+               
+            }
+         }
+      }
+      padding: 20px 30px;
+      width: 100%;
+      &__top {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         &__left {
+            display: flex;
+            align-items: center;
+            column-gap: 30px
+         }
+         &__lang {
+            display: flex;
+            width: 100%;
+            border: 1px solid #D4C8BE;
+            border-radius: 5px;
+            margin-top: 70px;
+            div {
+               font-style: normal;
+               font-weight: 400;
+               font-size: 16px;
+               line-height: 20px;
+               font-family: var(--text__front);
+               color: var(--black);
+               padding: 10px 35px;
+               cursor: pointer;
+            }
+            div.active {
+               background-color:#D4C8BE;
+               
+            }
+         }
+      }
+   }
+   &__wrapper {
+      ul{
+         display: flex;
+         column-gap: 70px;
+         width: max-content;
+         margin: 27px auto 0 auto;
+         li {
+            a {
+               font-style: normal;
+               font-weight: 400;
+               font-size: 16px;
+               line-height: 20px;
+               color: var(--black);
+               font-family: var(--text__front);
+               text-decoration: none;
+            }
          }
       }
    }
