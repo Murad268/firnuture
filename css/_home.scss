@@ -158,11 +158,86 @@
       margin: 42px auto 0 auto;
    }
 }
+.contact {
+   padding: 128px 0 157px 0;
+   &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 52px;
+      color: var(--header__title__front);
+      color: var(--black);
+   }
+   &__wrapper {
+      margin-top: 59px;
+      display: flex;
+      column-gap: 130px;
+      text-align: center;
+      height: max-content;
+      // flex-wrap: wrap;
+   }
+   &__form {
+      button {
+         width: 100%;
+         margin-top: 20px;
+      }
+      width: 563px;
 
-@media(max-width: 1380px) {
+      textarea {
+         border: 1px solid #D4C8BE;
+         border-radius: 10px;
+         width: 563px;
+         height: 136px;
+         padding: 17px 0 0 20px; 
+         color: var(--brown);
+      }
+      textarea::placeholder {
+         color: var(--brown);
+      }
+      input {
+         width: 100%;
+         height: 54px;
+         border: 1px solid #D4C8BE;
+         margin-bottom: 15px;
+         color: var(--brown);
+         padding-left: 20px;
+         border-radius: 10px;
+      }
+      input::placeholder {
+         color: var(--brown);
+      }
+      input:focus {
+         outline: none;
+      } 
+   }
+}
+@media(max-width: 1390px) {
    .container {
       padding: 0 20px;
    }
+ 
+  .contact__wrapper {
+   width: 100%;
+   flex-direction: column;
+   textarea {
+      width: 100%;
+   }
+   .button {
+      width: 330px;
+   }
+  }
+
+  .contact__form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contact__img {
+      width: 100%;
+      img {
+         width: 100%;
+
+      }
+  }
  
 }
 @media(max-width: 1365px) {
@@ -174,6 +249,7 @@
       margin-top: 20px;
    }
 }
+
 @media(max-width: 992px) {
    .header__body {
       margin-top: -60px;
@@ -242,6 +318,13 @@
    }
 }
 @media(max-width: 768px) {
+   .contact__title {
+      font-size: 24px;
+      margin-bottom: -50px;
+   }
+   .contact {
+      padding: 50px 0;
+   }
    .discount {
       h1 {
          font-size: 24px;
@@ -254,8 +337,10 @@
       }
    }
 }
-@media(max-width: 368px) {
-   .icon__button, .secondar__button {
-      width: 100%;
+@media(max-width: 380px) {
+   .contact {
+      .button {
+         width: 100% !important;
+      }
    }
 }

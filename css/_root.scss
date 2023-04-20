@@ -112,3 +112,9 @@ button {
    align-items: center;
    border: none
 }
+
+@media(max-width: 368px) {
+   .icon__button, .secondar__button, .button {
+      width: 100%;
+   }
+}
