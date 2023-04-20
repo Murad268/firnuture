@@ -211,20 +211,50 @@
       } 
    }
 }
+.footer__wrapper {
+   display: grid;
+   grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+.footer__text, .footer__text>a {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   font-family: var(--text__front);
+   color: #717171;
+   
+}
+.footer__text:has(a) {
+   text-align: center;
+}
+.copyright {
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 400;
+   font-family: var(--text__front);
+   color: var(--black);
+}
+.footer__logo {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 52.2px;
+   line-height: 58px;
+   font-family: var(--header__title__front);
+   color: var(--text__front);
+}
 @media(max-width: 1390px) {
    .container {
       padding: 0 20px;
    }
  
   .contact__wrapper {
+   column-gap: 20px;
    width: 100%;
-   flex-direction: column;
    textarea {
       width: 100%;
    }
-   .button {
-      width: 330px;
-   }
+  
   }
 
   .contact__form {
@@ -248,9 +278,28 @@
       width: 100%;
       margin-top: 20px;
    }
-}
 
+}
+@media(max-width: 1200px) {
+   .footer__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 50px;
+      row-gap: 40px;
+   }
+   .footer__text:has(a) {
+      text-align: left;
+   }
+}
 @media(max-width: 992px) {
+   .contact__wrapper {
+      flex-direction: column;
+      .button {
+         width: 330px;
+      }
+   }
+   .footer__wrapper {
+      column-gap: 25px;
+   }
    .header__body {
       margin-top: -60px;
    }
@@ -282,6 +331,9 @@
    }
 }
 @media(max-width: 768px) {
+   .footer__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+   }
    .about__img {
       width: 100%;
       img {
@@ -337,7 +389,24 @@
       }
    }
 }
-@media(max-width: 380px) {
+@media(max-width: 600px) {
+   .discount {
+      margin-top: 30px;
+   }
+   .footer__wrapper {
+      padding-bottom: 10px;
+      grid-template-columns: 1fr;
+      width: 100%;
+   }
+   .footer__logo {
+      font-size: 28.402px;
+      line-height: 32px;
+   }
+   .footer__wrapper>div {
+      width: 100% !important;
+   }
+}
+@media(max-width: 400px) {
    .contact {
       .button {
          width: 100% !important;
