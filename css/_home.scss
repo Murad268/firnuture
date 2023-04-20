@@ -322,6 +322,11 @@
 }
 .categories {
    margin-top: 350px;
+   .slick-dots li button:before, .slick-dots li.slick-active button:before {
+      color: var(--brown);
+      margin-top: 30px;
+   } 
+   
    &__wrapper {
       display: flex;
       position: relative;
@@ -527,8 +532,10 @@
    }
 }
 @media(max-width: 600px) {
+
    .category {
       margin: 0 0;
+      
    }
    .discount {
       margin-top: 30px;

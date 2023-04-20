@@ -39,7 +39,8 @@ $('.categories__wrapper').slick({
          breakpoint: 560,
          settings: {
             slidesToShow: 1,
-            arrows: false
+            arrows: false,
+            dots: true
          }
       }
    ]
