@@ -1,4 +1,5 @@
 .productsPage {
+  
    .catMini {
       .sub__menu.active {
          bottom: -260px;
@@ -8,8 +9,17 @@
       .sub__menu.active {
          bottom: -370px;
       }
+      i {
+         position: absolute;
+         right: 20px;
+         transition: 0.4s;
+      }
    }
    .sortMini {
+      img {
+         position: absolute;
+         right: 20px;
+      }
       .sub__menu.active {
          bottom: -115px
       }
@@ -86,6 +96,7 @@
    .product {
       position: relative;
       .addFav {
+        
          position: absolute;
          top: 15px;
          right: 15px;
@@ -129,6 +140,14 @@
          display: none;
          margin-bottom: 100px;
          &__box {
+            i {
+               position: absolute;
+               right: 20px;
+               transition: 0.4s;
+               &.active {
+                  transform: rotate(180deg);
+               }
+            }
             transition: all 0.4s;
             margin-bottom: 10px;
             position: relative;

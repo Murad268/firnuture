@@ -49,7 +49,7 @@ function subSort(mainSelector, subMenuSelector) {
    const main = document.querySelector(mainSelector),
          subMenu = document.querySelector(subMenuSelector);
          main.addEventListener('click', (e) => {
-            
+            main.querySelector("i")?.classList.toggle("active");
             subMenu.classList.toggle("active")
             e.target.classList.toggle("active")
             const marginBottom = parseInt(main.style.marginBottom, 10);
