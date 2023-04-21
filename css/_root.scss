@@ -79,7 +79,23 @@ body {
    }
 }
 
-
+.page__links {
+   
+   margin: 70px 0 49px 0;
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+   }
+   a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--black);
+      font-family: var(--text__front);
+   }
+}
 .icon__button:hover {
    background:var(--hover-btn);
    color: var(--gray-first);
@@ -165,6 +181,9 @@ button {
    }
 }
 @media(max-width: 600px) {
+   .page__links {
+      margin: 50px 0 40px 0;
+   }
    .line {
       display: none;
    }
