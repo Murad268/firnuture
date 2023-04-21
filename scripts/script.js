@@ -46,6 +46,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $('.categories__wrapper').slick({
    infinite: true,
+   slidesToShow: 4,
+   centerMode: false,
+   slidesToScroll: 1,
+   prevArrow: '<div class="slideCarRigt"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>',
+   nextArrow: '<div class="slideCarLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>',
+   responsive: [{
+         breakpoint: 1180,
+         settings: {
+            slidesToShow: 2,
+            arrows: false
+         }
+      },
+      {
+         breakpoint: 560,
+         settings: {
+            slidesToShow: 1,
+            arrows: false,
+            dots: true
+         }
+      }
+   ]
+});
+
+
+$('.collections__wrapper').slick({
+   infinite: true,
    slidesToShow: 3,
    centerMode: false,
    slidesToScroll: 1,

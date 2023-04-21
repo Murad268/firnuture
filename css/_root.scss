@@ -14,7 +14,24 @@
 body {
    background: #EAE6DF;
 }
+.see__link, .mini_see {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   font-family: var(--text__front);
+   color: var(--brown);
 
+   text-decoration-line: underline;
+}
+.see__link {
+   float: right;
+}
+.mini__see {
+   display: none;
+   float: left;
+
+}
 .main__subtitle {
    font-family: var(--text__front);
    font-style: normal;
