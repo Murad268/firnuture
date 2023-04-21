@@ -54,7 +54,6 @@ function changeAcc(account, wish, sett, wlist) {
          wishList = document.querySelector(wlist);
 
    accPage.addEventListener("click", (e) => {
-      e.target.querySelector("img").src = "../assets/icons/user/User Rounded.png"
       settings.style.display = "block";
       wishList.style.display = "none";
    })
