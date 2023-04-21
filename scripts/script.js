@@ -21,13 +21,11 @@ function searchVisible(searchSelector, overlaySelector, closeSelector, activeCla
    search.addEventListener("click", () => {
       overlay.classList.add(activeClass);
       sr.classList.add(srActive);
-      document.body.style.overflow="hidden";
       document.body.style.marginRight = "17px"
    })
    close.addEventListener("click", () => {
       overlay.classList.remove(activeClass);
       sr.classList.remove(srActive);
-      document.body.style.overflow="auto";
       document.body.style.marginRight = "0px"
    })
 }
