@@ -218,7 +218,38 @@ if(window.innerWidth<992) {
       ]
     });
 }
-
+$('.smiliarProducts__wrapper').slick({
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   autoplay: true,
+   autoplaySpeed: 2000,
+   arrows: false,
+   dots: false,
+   responsive: [
+     {
+       breakpoint: 992,
+       settings: {
+         slidesToShow: 3,
+         slidesToScroll: 1
+       }
+     },
+     {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 568,
+      settings: {
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+   ]
+ });
 
 function checkCheckbox(checkBoxTriggers, activeClass) {
    const triggers = document.querySelectorAll(checkBoxTriggers);

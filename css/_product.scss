@@ -171,6 +171,46 @@
 .topProdTitle {
   display: none;
 }
+.smiliarProducts {
+  &__wrapper {
+    padding: 0 -10px;
+    padding-bottom: 100px;
+  }
+  .product {
+    margin: 0 10px;
+    position: relative;
+    .addFav {
+       position: absolute;
+       top: 15px;
+       right: 15px;
+    }
+    &__img {
+       width: 100%;
+       img {
+          width: 100%;
+          object-fit: fill;
+       }
+    }
+    &__name {
+       font-style: normal;
+       font-weight: 500;
+       font-size: 20px;
+       line-height: 28px;
+       font-family: var(--header__title__front);
+       color: var(--black);
+       margin-top: 22px;
+    }
+    &__price {
+       font-style: normal;
+       font-weight: 700;
+       font-size: 20px;
+       line-height: 28px;
+       font-family: var(--header__title__front);
+       color: var(--brown);
+       margin-top: 22px;
+    }
+ }
+}
 @media(max-width: 1100px) {
   .productPage__desc {
     padding-left: 0;
