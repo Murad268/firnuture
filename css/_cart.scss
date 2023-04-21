@@ -172,6 +172,7 @@
    }
 }
 @media(max-width: 560px) {
+
    .cartPage__cart__info {
       justify-content: space-between
    }
@@ -227,7 +228,11 @@
       margin-left: -40px;
    }
 }
-
+@media(max-width: 500px) {
+   .cartPage__summary {
+      max-width: 100% !important;
+   }
+}
 @media(max-width: 350px) {
    .cartPage__cart__info {
       flex-direction: column;
