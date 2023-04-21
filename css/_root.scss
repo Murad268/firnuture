@@ -9,7 +9,20 @@
   --text__front: 'Raleway';
 }
 
-
+.back {
+   margin-top: 40px;
+   margin-bottom: 150px;
+   a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: var(--text__front);
+      color: var(--brown);
+      text-decoration: underline;
+    
+   }
+}
 .main__title {
    font-style: normal;
    font-weight: 700;
@@ -202,6 +215,10 @@ button {
    }
 }
 @media(max-width: 600px) {
+   .back {
+      margin-top: 30px;
+      margin-bottom: 100px;
+   }
    .main__title {
       font-size: 24px;
       line-height: 32px;
