@@ -43,7 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
    // subSort('.catMini', ".catMini .sub__menu");
    
    // subSort('.colMini', ".colMini .sub__menu");
+   changeAcc(".accountPage__nav__link__personal", ".accountPage__nav__wish", ".accountPage__settings", ".accountPage__wishlist")
 })
+
+
+function changeAcc(account, wish, sett, wlist) {
+   const accPage = document.querySelector(account),
+         wishPage = document.querySelector(wish),
+         settings = document.querySelector(sett),
+         wishList = document.querySelector(wlist);
+
+   accPage.addEventListener("click", (e) => {
+      e.target.querySelector("img").src = "../assets/icons/user/User Rounded.png"
+      settings.style.display = "block";
+      wishList.style.display = "none";
+   })
+   wishPage.addEventListener("click", () => {
+      settings.style.display = "none";
+      wishList.style.display = "block";
+   })
+}
 
 function subSort(mainSelector, subMenuSelector) {
    const main = document.querySelector(mainSelector),
@@ -243,7 +262,7 @@ $('.smiliarProducts__wrapper').slick({
     {
       breakpoint: 568,
       settings: {
-        dots: true,
+       
         slidesToShow: 1,
         slidesToScroll: 1
       }
