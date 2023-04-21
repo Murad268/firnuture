@@ -37,7 +37,34 @@ document.addEventListener("DOMContentLoaded", () => {
    openMenu(".header__hamburger", '.navbar__menu', 'navbar__menu__active', '.navbar__menu__exit');
    searchVisible(".header__top__left__search", '.overlay', '.header__sr__exit', 'overlay__active', '.header__sr', 'header__sr__active');
    searchVisible(".header__top__left__search__right", '.overlay', '.header__sr__exit', 'overlay__active', '.header__sr', 'header__sr__active')
+   checkCheckbox(".productsPage__filter__list input", 'active');
+   subSort('.main__sort', ".sub__menu");
+   subSort('.sortMini', ".sortMini .sub__menu");
+   subSort('.catMini', ".catMini .sub__menu");
+   
+   subSort('.colMini', ".colMini .sub__menu");
 })
+
+function subSort(mainSelector, subMenuSelector) {
+   const main = document.querySelector(mainSelector),
+         subMenu = document.querySelector(subMenuSelector);
+         main.addEventListener('click', (e) => {
+            
+            subMenu.classList.toggle("active")
+            e.target.classList.toggle("active")
+            const marginBottom = parseInt(main.style.marginBottom, 10);
+
+            if (marginBottom === subMenu.clientHeight) {
+         
+            main.style.marginBottom = '10px';
+            } else {
+            
+            main.style.marginBottom = subMenu.clientHeight + 'px';
+            }
+            
+         })
+}
+
 
 
 
@@ -153,3 +180,15 @@ if(window.innerWidth<992) {
       ]
     });
 }
+
+
+function checkCheckbox(checkBoxTriggers, activeClass) {
+   const triggers = document.querySelectorAll(checkBoxTriggers);
+   triggers.forEach(trigger => {
+      trigger.addEventListener("change", (e) => {
+         e.target.classList.toggle(activeClass);
+         console.log(e.target)
+      })
+   })
+}
+
