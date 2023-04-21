@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
    searchVisible(".header__top__left__search", '.overlay', '.header__sr__exit', 'overlay__active', '.header__sr', 'header__sr__active');
    searchVisible(".header__top__left__search__right", '.overlay', '.header__sr__exit', 'overlay__active', '.header__sr', 'header__sr__active')
    checkCheckbox(".productsPage__filter__list input", 'active');
-   subSort('.main__sort', ".sub__menu");
-   subSort('.sortMini', ".sortMini .sub__menu");
-   subSort('.catMini', ".catMini .sub__menu");
+   // subSort('.main__sort', ".sub__menu");
+   // subSort('.sortMini', ".sortMini .sub__menu");
+   // subSort('.catMini', ".catMini .sub__menu");
    
-   subSort('.colMini', ".colMini .sub__menu");
+   // subSort('.colMini', ".colMini .sub__menu");
 })
 
 function subSort(mainSelector, subMenuSelector) {
@@ -69,6 +69,44 @@ function subSort(mainSelector, subMenuSelector) {
 
 
 
+
+$('.productPage__carusel__main').slick({
+   infinite: true,
+   slidesToShow: 1,
+   arrows: false,
+   slidesToScroll: 1, 
+   asNavFor: '.productPage__carusel__mini__inner'
+});
+$('.productPage__carusel__mini__inner').slick({
+   infinite: true,
+   slidesToShow: 3,
+   arrows: false,
+   slidesToScroll: 1, 
+   asNavFor: '.productPage__carusel__main',
+   responsive: [{
+      breakpoint: 1100,
+      settings: {
+         slidesToShow: 5,
+         arrows: false
+      }
+   },
+   {
+      breakpoint: 670,
+      settings: {
+         slidesToShow: 4,
+         arrows: false
+      }
+   },
+   {
+      breakpoint: 400,
+      settings: {
+         slidesToShow: 3,
+         arrows: false
+      }
+   }
+   
+]
+});
 
 
 $('.categories__wrapper').slick({
