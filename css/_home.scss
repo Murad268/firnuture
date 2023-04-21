@@ -220,7 +220,7 @@
 }
 
 .about {
-   padding-top: 100px;
+
    &__img {
       width: 680px;
    }
@@ -488,7 +488,9 @@
 }
 .products {
    padding: 128px 0;
-
+   .mini_see {
+      display: none;
+   }
    &__wrapper {
       display: grid;
       grid-template-columns: repeat( auto-fit, minmax(330px, 1fr) );
@@ -656,6 +658,11 @@
    }
 }
 @media(max-width: 992px) {
+   .products {
+      .mini_see {
+         display: block;
+      }
+   }
    .mini__see {
       display: block;
  
