@@ -778,6 +778,7 @@
    }
 }
 @media(max-width: 600px) {
+
    .popular {
       margin-top: 70px;
    }
@@ -807,6 +808,9 @@
          input {
             margin-left: -20px;
          }
+      }
+      .icon__button {
+         width: 100%;
       }
    }
    .category {
