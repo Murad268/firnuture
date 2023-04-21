@@ -152,7 +152,15 @@ body {
    max-width: 1380px;
    margin: 0 auto;
 }
-
+.your__sr {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 28px;
+   font-family: var(--text__front);
+   color: var(--black);
+   margin-top: 50px;
+}
 button {
    display: flex;
    justify-content: center;

@@ -276,6 +276,10 @@
       column-gap: 66px;
       flex-wrap: wrap;
    }
+   &__title {
+      font-size: 64px;
+      line-height: 52px;
+   }
 }
 .discount {
    margin-top: 140px;
@@ -307,7 +311,7 @@
    }
 }
 .contact {
-   padding: 128px 0 157px 0;
+   padding: 10px 0 157px 0;
    &__title {
       font-style: normal;
       font-weight: 700;
@@ -791,9 +795,7 @@
       cursor: pointer;
       z-index: 10;
    }
-   .contact {
-      padding: 50px 0;
-   }
+ 
    .discount {
       h1 {
          font-size: 24px;
@@ -807,6 +809,10 @@
    }
 }
 @media(max-width: 600px) {
+   .about__title {
+      font-size: 24px;
+      line-height: 32px;
+   }
    .about__statistics__wrapper {
       padding: 0;
    }

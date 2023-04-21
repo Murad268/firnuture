@@ -1,0 +1,87 @@
+
+.search {
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(330px, 1fr) );
+      column-gap: 20px;
+      row-gap: 45px;
+      margin: 0 -10px;
+      margin-top: 59px;
+      margin-bottom: 30px;
+      .product {
+         margin: 0 10px;
+         position: relative;
+         .addFav {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+         }
+         &__img {
+            width: 100%;
+            img {
+               width: 100%;
+               object-fit: fill;
+            }
+         }
+         &__name {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: var(--header__title__front);
+            color: var(--black);
+            margin-top: 22px;
+         }
+         &__price {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            font-family: var(--header__title__front);
+            color: var(--brown);
+            margin-top: 22px;
+         }
+      }
+      &__title {
+         font-style: normal;
+         font-weight: 700;
+         font-size: 48px;
+         line-height: 52px;
+         color: var(--black);
+         font-family: var(--header__title__front);
+      }
+   }
+}
+.pagination {
+   padding-bottom: 200px;
+   &__wrapper {
+      float: right;
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      a {
+         font-style: normal;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 24px;
+         font-family: var(--text__front);
+         color: var(--black);
+      }
+   }
+}
+
+@media(max-width: 600px) {
+   .search {
+      &__wrapper {
+         grid-template-columns: repeat(1, 100%);
+      }
+   }
+   .pagination {
+      padding-bottom: 100px;
+      &__wrapper {
+         width: max-content;
+         margin: 0 auto;
+         float: none;
+      }
+   }
+}
